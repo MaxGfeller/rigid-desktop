@@ -1,0 +1,10 @@
+{
+    "project-select-dialog": {
+        "title": "Projekt auswählen",
+        "last-opened-projects": "Zuletzt geöffnete Projekte",
+        "open-project": "Projekt öffnen",
+        "errors": {
+            "no-config-file-found": "Keine rigid.json Datei gefunden"
+        }
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "project-select-dialog": {
+        "title": "Select project to open",
+        "last-opened-projects": "Last opened projects",
+        "open-project": "Open project"
+    }
+}
