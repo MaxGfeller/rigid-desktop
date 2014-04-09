@@ -35,7 +35,7 @@
     "envify": "^1.2.1",
     "handlebars": "^2.0.0-alpha.2",
     "i18next": "^1.7.1",
-    "leveldown": "^0.10.2",
+    "level-js": "^2.1.2",
     "levelup": "^0.18.2",
     "marked": "^0.3.2",
     "npm": "^1.4.6",
