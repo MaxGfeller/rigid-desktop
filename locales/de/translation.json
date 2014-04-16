@@ -6,5 +6,8 @@
         "errors": {
             "no-config-file-found": "Keine rigid.json Datei gefunden"
         }
+    },
+    "sites-list": {
+        "title": "Seiten"
     }
 }
