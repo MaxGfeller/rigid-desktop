@@ -16,22 +16,25 @@ function EventedView(obj) {
 EventedView.prototype._registerEvents = function() {
     for(var selector in this.events) {
         var el = document.querySelector(selector);
-        var events = this.events[selector];
-        for(var event in events) {
-            el.addEventListener(event, events[event]);
+        if(el) {
+            var events = this.events[selector];
+            for(var event in events) {
+                el.addEventListener(event, events[event]);
+            }
         }
     }
 }
 
-EventedView.prototype.render = function(el, cb) {
-    co(function*() {
+EventedView.prototype.render = function(selector, opts, cb) {
+    co(function *() {
         var src = yield thunkify(fs.readFile)(this.template, {
             encoding: 'utf8'
         });
 
-        var html = Handlebars.compile(src)();
+        var html = Handlebars.compile(src)(opts);
 
-        if(el) {
+        if(selector) {
+            var el = document.querySelector(selector);
             el.innerHTML = html;
             this.container = el;
         } else {
