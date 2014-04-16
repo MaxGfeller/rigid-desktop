@@ -3,16 +3,31 @@ var co = require('co');
 var domready = require('domready');
 var thunkify = require('thunkify');
 var os = require('os');
+var projectManager = require('./lib/project-manager');
 
-var projectSelectDialog = require('./components/project-select-dialog/index.js');
+var projectSelectDialog = require('./components/project-select-dialog/index');
+var sitesListView = require('./components/sites-list/index');
 
 co(function*() {
     yield thunkify(domready)();
 
     var mainEl = document.querySelector('#main');
 
-    yield thunkify(projectSelectDialog.render).call(projectSelectDialog, null);
+    yield (thunkify(projectSelectDialog.render).bind(projectSelectDialog)(null, {}));
     projectSelectDialog.on('selectedProject', function(activeProj) {
-        projectSelectDialog.destroy.call(projectSelectDialog);
+        projectSelectDialog.destroy();
+        renderMainView(activeProj);
     });
 })();
+
+
+var renderMainView = function(activeProject) {
+    co(function *() {
+        // render all subcomponents of the main view
+        yield thunkify(sitesListView.render).call(sitesListView, '.sites-list-container', {
+            sites: [{
+                unprefixedName: 'Seite 1'
+            }]
+        });
+    }).call(this);
+}
