@@ -17,7 +17,7 @@ body {
 
 .main-content-container {
     background-image: url('../assets/images/linen.png');
-    background-repeat: repeat-x repeat-y;
+    background-repeat: repeat;
     width: 80%;
     height: 100%;
     float: left;
@@ -58,4 +58,54 @@ body {
     float: left;
     width: 50%;
     font-size: 18px;
+}
+.site-editor {
+    width: 100%;
+    height: 100%;
+}
+.site-editor .left-panel {
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    float: left;
+}
+
+.site-editor .right-panel {
+    width: 50%;
+    height: 100%;
+    float: left;
+    background-color: #fff;
+    padding: 5px;
+}
+
+#markdown-editor {
+    height: 100%;
+}
+
+.CodeMirror {
+    height: 100%;
+}
+.CodeMirror-scroll {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+ul.sites-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.sites-list li {
+    display: block;
+    width: inherit;
+    margin-right: 5px;
+    padding-left: 2px;
+    border-radius: 2px;
+    height: 22px;
+    border: 1px solid #fff;
+    font-size: 13pt;
+}
+
+ul.sites-list li:hover {
+    border: 1px solid #eee;
 }
