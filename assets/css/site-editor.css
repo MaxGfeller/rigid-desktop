@@ -1,0 +1,30 @@
+.site-editor {
+    width: 100%;
+    height: 100%;
+}
+.site-editor .left-panel {
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    float: left;
+}
+
+.site-editor .right-panel {
+    width: 50%;
+    height: 100%;
+    float: left;
+    background-color: #fff;
+    padding: 5px;
+}
+
+#markdown-editor {
+    height: 100%;
+}
+
+.CodeMirror {
+    height: 100%;
+}
+.CodeMirror-scroll {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}

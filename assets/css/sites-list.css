@@ -1,0 +1,20 @@
+ul.sites-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.sites-list li {
+    display: block;
+    width: inherit;
+    margin-right: 5px;
+    padding-left: 2px;
+    border-radius: 2px;
+    height: 22px;
+    border: 1px solid #fff;
+    font-size: 13pt;
+}
+
+ul.sites-list li:hover {
+    border: 1px solid #eee;
+}
