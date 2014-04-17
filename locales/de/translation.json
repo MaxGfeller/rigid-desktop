@@ -8,6 +8,7 @@
         }
     },
     "sites-list": {
-        "title": "Seiten"
+        "title": "Seiten",
+        "startsite": "Startseite"
     }
 }
