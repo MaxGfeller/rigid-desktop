@@ -1,6 +1,16 @@
 <h2>{{t "sites-list.title"}}</h2>
 <ul class="sites-list">
     {{#sites}}
-    <li class="sites-list-entry">{{unprefixedName}}</li>
+    <li class="sites-list-entry" data-file="{{filename}}">
+        {{#if title}}
+            {{title}}
+        {{else}}
+            {{#if slug}}
+                {{slug}}
+            {{else}}
+                {{t "sites-list.startsite"}}
+            {{/if}}
+        {{/if}}
+    </li>
     {{/sites}}
 </ul>
