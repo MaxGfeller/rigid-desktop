@@ -15,12 +15,14 @@ function EventedView(obj) {
 
 EventedView.prototype._registerEvents = function() {
     for(var selector in this.events) {
-        var el = document.querySelector(selector);
-        if(el) {
+        var elements = document.querySelectorAll(selector);
+        if(elements) {
             var events = this.events[selector];
-            for(var event in events) {
-                el.addEventListener(event, events[event]);
-            }
+            [].slice.call(elements).forEach(function(el) {
+                for(var event in events) {
+                    el.addEventListener(event, events[event]);
+                }
+            });
         }
     }
 }
